@@ -8,6 +8,8 @@ Call a published Studio Flow from your own server with Node.js 20+, Python 3.9+ 
 2. Set `FLOW_ORIGIN` to the origin of the copied endpoint (HTTPS, or `http://127.0.0.1:3024` locally), `FLOW_ID` to its public identifier and `FLOW_TOKEN` to that Flow's key. The clients use `rvr_pipe_` Flow keys. Workspace application credentials for Runtime v2 have their own protocol.
 3. Read the descriptor to discover the actual input names/types. Starting a run can spend credits. Save one stable `FLOW_REQUEST_ID` per business operation **before submitting**. A retry of the same payload uses the same key. A new operation uses a new key.
 
+A Flow key pins the version that was published when you issued it. To move an integration to a new version, issue a second key after publication, read its descriptor, update your server, then revoke the old key. Costs and call counts remain attributed to each key.
+
 ## Install release 0.1.0
 
 ```sh
