@@ -1,0 +1,27 @@
+{
+  "name": "@reverie-ai-pro/flow-sdk",
+  "version": "0.1.0",
+  "description": "Server-side client for REVERIE Flow API",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "LICENSE",
+    "README.md"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reverie-ai-pro/flow-sdk.git",
+    "directory": "node"
+  }
+}
